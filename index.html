@@ -6,8 +6,9 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
         <link rel="stylesheet" href="Css/index.css">
-
 
         <title>Tasty Dots...</title>
 
@@ -20,14 +21,123 @@
                 <a class="navbar-brand" href="#">Tasty Dots...</a>
                 <div class="collapse navbar-collapse" id="Navbar">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active"><a class="nav-link" href="#"> Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"> About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"> Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"> Contact</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                     </ul>
+                    <span class="navbar-text">
+                        <a data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span> Login</a> 
+                    </span>
                 </div>
             </div>
         </nav>
+
+        <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Login</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="email">Email address</label>
+                                    <input type="email" class="from-control form-control-sm mr-1" id="email" placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="password">Password</label>
+                                    <input type="password" class="from-control form-control-sm mr-1" id="Password" placeholder="Enter Password">
+                                </div>
+                                <div class="col-sm-auto">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-lable">Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-sm ml-1">Sign in</button> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="reserveModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Reserve Table</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-sm-2 align-self-center">
+                                    <label class="col-form-lable">Number of Guests</label>
+                                </div>
+                                <div class="form-group col-sm-auto align-self-center">
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="guests" name="guests" value="1">
+                                        <label for="number" class="form-check-lable">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="guests" name="guests" value="2">
+                                        <label for="number" class="form-check-lable">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="guests" name="guests" value="3">
+                                        <label for="number" class="form-check-lable">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="guests" name="guests" value="4">
+                                        <label for="number" class="form-check-lable">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="guests" name="guests" value="5">
+                                        <label for="number" class="form-check-lable">5</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="guests" name="guests" value="6">
+                                        <label for="number" class="form-check-lable">6</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-sm-2">
+                                    <label class="col-form-lable">More than 6 guests, Please Make a call</label>
+                                </div>
+                                <div class="form-group col-sm-auto align-self-center">
+                                    <a class="btn btn-danger" href="tel:+919989678948"><i class="fa fa-phone fa-lg"></i> Call at +91-9989678948</a>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-sm-2 align-self-center">
+                                    <label class="col-form-lable">Date and Time</label>
+                                </div>
+                                <div class="form-group col-sm-auto align-self-center">
+                                    <input type="date" class="from-control form-control-sm" id="date" name="date">
+                                </div>
+                                <div class="form-group col-sm-auto align-self-center">
+                                    <input type="time" class="from-control form-control-sm" id="time" name="time">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-sm-auto offset-sm-2 align-self-center">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary ml-1">Reserve</button> 
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <header class="jumbotron">
             <div class="container">
@@ -42,6 +152,9 @@
                     <div class="col-12 col-sm-3 align-self-center">
                         <img class="img-fluid pic" src="Img/Logo3.png" alt="Tasty Dots...">
                     </div>
+                    <div class="col-12 col-sm-3">
+                        <button class="btn btn-warning btn-block mt-5" role="button" data-toggle="modal" data-target="#reserveModal">Reserve Table</button>
+                    </div>
                 </div>
             </div>
 
@@ -49,54 +162,68 @@
 
         <div class="container">
             <div class="row row-content align-items-center">
+                <div class="col-12 col-sm-4 order-sm-last col-md-3">
+                    <h3>This Week Special</h3>
+                </div>
+                <div class="col col-sm order-sm-first col-md">
+                    <div class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="Img/Pizza.PNG" alt="Pizza" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">
+                                Greek Style Pizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-primary">NEW</span>
+                            </h2>  
+                            <p class="d-none d-sm-block">This light and flavourful vegan pizza is made from scratch and topped with fresh avocado, zucchini, bell peppers and olives. 
+                                With goodness of so many fresh veggies and delicious pizza sauces, this Greek style pizza is a sure shot winner.</p>            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-content align-items-center">
                 <div class="col-12 col-sm-4 order-sm-first col-md-3">
-                    <h2>Greek Style Pizza</h2>    
+                    <h3>Sip, sip, hooray!</h3>
                 </div>
                 <div class="col col-sm order-sm-last col-md">
-                    <p>This light and flavourful vegan pizza is made from scratch and topped with fresh avocado, zucchini, bell peppers and olives. 
-                        With goodness of so many fresh veggies and delicious pizza sauces, this Greek style pizza is a sure shot winner.</p>            
+                    <div class="media">
+                        <div class="media-body">
+                            <h2 class="mt-0">Grilled watermelon and mint cocktail</h2>
+                            <p class="d-none d-sm-block">Cool down with this refreshing cocktail created by Ben Devlin, resident chef at Australia's hippest new hotel, Halcyon House.</p>
+                        </div>
+                        <img class="d-flex ml-3 img-thumbnail align-self-center" src="Img/Drink-Watermelon.jpg" alt="Watermelon Drink" height="200" width="200">
+                    </div>
                 </div>
             </div>
 
             <div class="row row-content align-items-center">
                 <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                    <h2>Buffet Special</h2>
+                    <h3>Look here :)</h3>
                 </div>
                 <div class="col col-sm order-sm-first col-md">
-                    <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. 
-                        Free flowing bubbly and soft drinks. All for just  per person</p>
+                    <div class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="Img/grilled-pineapple-mojitos-37947-2.jpg" alt="Mojito" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Grilled pineapple mojitos</h2>
+                            <p class="d-none d-sm-block">Michael Demagistris' of East Bar and Dining creates summer-in -a cocktail, with this delicious grilled, pineapple mojito.</p>        
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="row row-content align-items-center">
                 <div class="col-12 col-sm-4 order-sm-first col-md-3">
-                    <h2>Grilled watermelon, ink gin and mint cocktail</h2>
+                    <h3>Dinner is Better When We Eat Together</h3>
                 </div>
                 <div class="col col-sm order-sm-last col-md">
-                    <p>Cool down with this refreshing cocktail created by Ben Devlin, resident chef at Australia's hippest new hotel, Halcyon House.</p>
+                    <div class="media">
+                        <div class="media-body">
+                            <h2 class="mt-0">Dinner Special</h2>
+                            <p class="d-none d-sm-block">Want a simple dinner party that still gives guests some variety? Host an Italian bruschetta (not "brucschette") bar! 
+                                The spread on What's Gaby Cooking is easy to put together—just gather your favorite Italian ingredients, grill bread and enjoy!</p>        
+                        </div>
+                        <img class="d-flex ml-3 img-thumbnail align-self-center" src="Img/Dinner.jpg" alt="Dinner" height="120" width="120">
+                    </div>
                 </div>
             </div>
-
-            <div class="row row-content align-items-center">
-                <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                    <h2>Grilled pineapple mojitos</h2>
-                </div>
-                <div class="col col-sm order-sm-first col-md">
-                    <p>Michael Demagistris' of East Bar and Dining creates summer-in -a cocktail, with this delicious grilled, pineapple mojito.</p>
-                </div>
-            </div>
-
-            <div class="row row-content align-items-center">
-                <div class="col-12 col-sm-4 order-sm-first col-md-3">
-                    <h2>Dinner Special</h2>
-                </div>
-                <div class="col col-sm order-sm-last col-md">
-                    <p>Want a simple dinner party that still gives guests some variety? Host an Italian bruschetta (not "brucschette") bar! 
-                        The spread on What's Gaby Cooking is easy to put together—just gather your favorite Italian ingredients, grill bread and enjoy!</p>
-                </div>
-            </div>
-
-
         </div>
 
 
@@ -107,9 +234,9 @@
                         <h5>Links</h5>
                         <ul class="list-unstyled">
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
+                            <li><a href="./aboutus.html">About</a></li>
                             <li><a href="#">Menu</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="./contactus.html">Contact</a></li>
                         </ul>
                     </div>
                     <div class="col-7 col-sm-4">
@@ -117,27 +244,27 @@
                         <address>121,OMR Road,<br> 
                             Sholinganallur,<br>
                             Chennai-600119<br>
-                            Phone:+91 9989678948<br>
-                            Email:Tastydotsfood@gmail.com
+                            <i class="fa fa-phone fa-lg"></i> :<a href="tel:+919989678948"> +91-9989678948</a><br>
+                            <i class="fa fa-envelope fa-lg"></i> :<a href="mailto:Tastydotsfood@gmail.com"> Tastydotsfood@gmail.com</a>
                         </address>            
                     </div>
-                    <div class="col-12 col-sm-4">
-                        <h6>google+</h6>
-                        <h6>Facebook</h6>
-                        <h6>Twitter</h6>
-                        <h6>Email</h6>
-                        <h6>Youtube</h6>
+                    <div class="col-12 col-sm-4 align-self-center">
+                        <div class="text-center">
+                            <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                            <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                            <a class="btn btn-social-icon btn-twitter" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                            <a class="btn btn-social-icon btn-google" href="http://www.youtube.com"><i class="fa fa-youtube"></i></a>
+                            <a class="btn btn-social-icon" href="mailto:Tastydotsfood@gmail.com"><i class="fa fa-envelope-o"></i></a>    
+                        </div>
                     </div>
                 </div>
             </div>
-
         </footer>
-
 
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        </body>
+    </body>
 
 
 </html>
